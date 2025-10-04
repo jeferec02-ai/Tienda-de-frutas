@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoFruver - Frutas Frescas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">🍎 EcoFruver</div>
+            <nav class="nav">
+                <a href="#inicio">Inicio</a>
+                <a href="#productos">Productos</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <!-- Agregando onclick para abrir el modal del carrito -->
+            <div class="cart" onclick="toggleCart()">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Agregando modal del carrito -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2>Tu Carrito</h2>
+                <button class="close-cart" onclick="toggleCart()">✕</button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <p class="empty-cart">Tu carrito está vacío</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Total:</strong>
+                    <span id="cart-total">$0</span>
+                </div>
+                <button class="btn-primary" onclick="checkout()">Finalizar Compra</button>
+                <button class="btn-clear" onclick="clearCart()">Vaciar Carrito</button>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="hero" id="inicio">
+        <div class="hero-background">
+            <img src="public/hero-frutas.jpg" alt="Frutas frescas" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Frutas Frescas y Orgánicas</h1>
+            <p class="hero-subtitle">Directamente de la finca a tu mesa</p>
+            <button class="btn-primary">Comprar Ahora</button>
+        </div>
+    </section>
+
+    <section class="products-section" id="productos">
+        <div class="container">
+            <h2 class="section-title">Productos Destacados</h2>
+            <div class="products-grid" id="products-grid">
+            </div>
+        </div>
+    </section>
+
+ 
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EcoFruver</h3>
+                    <p>Frutas frescas y orgánicas de la mejor calidad</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>📧 info@ecofruver.com</p>
+                    <p>📱 +57 00 000 0000</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <p>Facebook | Instagram | Twitter</p>
+                </div>
+            </div>
+            <div class="footer-credit">
+                Hecha por Jefersson Espinosa
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
